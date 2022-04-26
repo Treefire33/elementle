@@ -1,0 +1,1 @@
+alert("Game not ready! Feel free to leave!");
