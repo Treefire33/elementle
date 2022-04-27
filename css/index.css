@@ -1,6 +1,7 @@
 #heading{
     list-style-type: none;
     text-align: center;
+    background-color: grey;
 }
 #heading .center{
     display: inline-block;
