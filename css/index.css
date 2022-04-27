@@ -14,3 +14,12 @@
 h1{
     font-family: Helvetica, sans-serif;
 }
+#body{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+#body #periods, #body .row{
+    display: inline-block;
+}
