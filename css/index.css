@@ -1,7 +1,6 @@
 body{
     background-color: rgb(18,18,19);
     color: white;
-    font-family: Helvetica, sans-serif;
 }
 hr{
     border: none;
@@ -38,4 +37,11 @@ img{
 }
 #lbttn, #rbttn{
     transform: translate(0px, 20px);
+}
+#clues{
+    background-color: grey;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
 }
