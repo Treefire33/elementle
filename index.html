@@ -1,53 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Elementle</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet" href="css/index.css"></link>
-    </head>
-    <body>
-        <header>
-            <div id="heading">
-                <p class="left center">S</p>
-                <h1 class="center">Elementle</h1>
-                <p class="right center">P</p>
-            </div>
-        </header>
-        <div id="body">
-            <!--<button width="200px" height="200px" id="lbttn">Go left</button>-->
-            <img src="img/74837-200.png" width="50px" height="50px" id="lbttn"/>
-            <div id="periods">
-                <div id="p1" class="row">
-                    <p>Placeholder</p>
-                </div>
-                <div id="p2" class="row">
-                    <p>Placeholder0</p>
-                </div>
-                <div id="p3" class="row">
-                    <p>Placeholder1</p>
-                </div>
-                <div id="p4" class="row">
-                    <p>Placeholder2</p>
-                </div>
-                <div id="p5" class="row">
-                    <p>Placeholder3</p>
-                </div>
-                <div id="p6" class="row">
-                    <p>Placeholder4</p>
-                </div>
-                <div id="p7" class="row">
-                    <p>Placeholder5</p>
-                </div>
-                <div id="p8" class="row">
-                    <p>Placeholder6</p>
-                </div>
-                <div id="p9" class="row">
-                    <p>Placeholder7</p>
-                </div>
-            </div>
-            <img src="img/74837-200 (1).png" width="50px" height="50px" id="rbttn"/>
-            <!--<button width="200px" height="200px" id="rbttn">Go Right</button>-->
-        </div>
-        <script src="js/main.js"></script>        
-    </body>
-</html>
+body{
+    background-color: rgb(18,18,19);
+    color: white;
+}
+hr{
+    border: none;
+    height: 2px;
+    background-color: rgb(58,58,60);
+}
+h1{
+    font-family: Helvetica, sans-serif;
+}
+img{
+    background-color: white;
+}
+#heading{
+    list-style-type: none;
+    text-align: center;
+}
+#heading .center{
+    display: inline-block;
+}
+#heading .left{
+    transform: translate(-75px);
+}
+#heading .right{
+    transform: translate(75px);
+}
+#body{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+}
+#body #periods, #body .row{
+    display: inline-block;
+}
+#lbttn, #rbttn{
+    transform: translate(0px, 20px);
+}
