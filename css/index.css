@@ -1,3 +1,19 @@
+body{
+    background-color: rgb(18,18,19);
+    color: white;
+    font-family: Helvetica, sans-serif;
+}
+hr{
+    border: none;
+    height: 2px;
+    background-color: rgb(58,58,60);
+}
+h1{
+    font-family: Helvetica, sans-serif;
+}
+img{
+    background-color: white;
+}
 #heading{
     list-style-type: none;
     text-align: center;
@@ -10,9 +26,6 @@
 }
 #heading .right{
     transform: translate(75px);
-}
-h1{
-    font-family: Helvetica, sans-serif;
 }
 #body{
     margin: auto;
