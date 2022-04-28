@@ -1,14 +1,12 @@
 body{
     background-color: rgb(18,18,19);
     color: white;
+    font-family: Helvetica, sans-serif;
 }
 hr{
     border: none;
     height: 2px;
     background-color: rgb(58,58,60);
-}
-h1{
-    font-family: Helvetica, sans-serif;
 }
 img{
     background-color: white;
@@ -37,6 +35,10 @@ img{
 }
 #lbttn, #rbttn{
     transform: translate(0px, 20px);
+}
+.row img{
+    display: inline-block;
+    transform: translateY(20px);
 }
 #clues{
     background-color: grey;
