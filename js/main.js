@@ -1,3 +1,4 @@
+publishClue();
 var currentPeriod = 1;
 $(document).ready(function(){
     $('.helpBackground').show();
