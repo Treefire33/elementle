@@ -1,5 +1,6 @@
 publishClue();
 var currentPeriod = 1;
+var guessQueued;
 $(document).ready(function(){
     $('.helpBackground').show();
     $('.helpBackground').click(function(){
@@ -26,5 +27,9 @@ $(document).ready(function(){
             $("#p"+currentPeriod.toString()).show();
             $("#p"+(currentPeriod-1).toString()).hide();
         }
+    });
+    $(".elementButton").click(function(){
+       var guessId = $(this).attr('id');
+       guessQueued = guessId;
     });
 });
