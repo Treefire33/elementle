@@ -2,6 +2,9 @@ publishClue();
 var currentPeriod = 1;
 var guessQueued = "NAVA";
 $(document).ready(function(){
+    $(".row").hide();
+    $("#p1").show();
+    $("#clues").text(currentClue);
     $('.helpBackground').show();
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
@@ -9,9 +12,6 @@ $(document).ready(function(){
     $('.popupCloseButton').click(function(){
         $('.helpBackground').hide();
     });
-    $(".row").hide();
-    $("#p1").show();
-    $("#clues").text(currentClue);
     $("#lbttn").click(function(){
         if(currentPeriod !== 1)
         {
@@ -38,7 +38,9 @@ $(document).ready(function(){
             let newIMG = getElementFromSymbol(guessQueued);
             var img = new Image();
             img.src = "img/"+newIMG+".png";
-            $("#guesses").append(img, " " ,newIMG);
+            img.width = "100px";
+            img.height = "100px";
+            $("#guesses").append(img, "\n" ,newIMG, "\n\n\n");
         }
         guessQueued = "NAVA";
     });
