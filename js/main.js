@@ -9,6 +9,7 @@ $(document).ready(function(){
     });
     $(".row").hide();
     $("#p1").show();
+    $("#clues").text(currentClue);
     $("#lbttn").click(function(){
         if(currentPeriod !== 1)
         {
