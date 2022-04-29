@@ -1,6 +1,6 @@
 publishClue();
 var currentPeriod = 1;
-var guessQueued;
+var guessQueued = "NAVA";
 $(document).ready(function(){
     $('.helpBackground').show();
     $('.helpBackground').click(function(){
@@ -31,5 +31,12 @@ $(document).ready(function(){
     $(".elementButton").click(function(){
        var guessId = $(this).attr('id');
        guessQueued = guessId;
+    });
+    $("#enter").click(function(){
+        if(guessQueued !== "NAVA")
+        {
+            $("#guesses").append(guessQueued);
+        }
+        guessQueued = "NAVA";
     });
 });
