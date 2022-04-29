@@ -36,6 +36,7 @@ $(document).ready(function(){
         if(guessQueued !== "NAVA")
         {
             $("#guesses").append(guessQueued);
+            let newIMG;
         }
         guessQueued = "NAVA";
     });
