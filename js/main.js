@@ -35,8 +35,10 @@ $(document).ready(function(){
     $("#enter").click(function(){
         if(guessQueued !== "NAVA")
         {
-            $("#guesses").append(guessQueued);
-            let newIMG;
+            let newIMG = getElementFromSymbol(guessQueued);
+            var img = new Image();
+            img.src = newIMG+".png";
+            $("#guesses").append(img, " " ,newIMG);
         }
         guessQueued = "NAVA";
     });
