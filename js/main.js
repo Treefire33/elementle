@@ -37,7 +37,7 @@ $(document).ready(function(){
         {
             let newIMG = getElementFromSymbol(guessQueued);
             var img = new Image();
-            img.src = newIMG+".png";
+            img.src = "img/"+newIMG+".png";
             $("#guesses").append(img, " " ,newIMG);
         }
         guessQueued = "NAVA";
