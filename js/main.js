@@ -1,5 +1,12 @@
 var currentPeriod = 1;
 $(document).ready(function(){
+    $('.helpBackground').show();
+    $('.helpBackground').click(function(){
+        $('.helpBackground').hide();
+    });
+    $('.popupCloseButton').click(function(){
+        $('.helpBackground').hide();
+    });
     $(".row").hide();
     $("#p1").show();
     $("#lbttn").click(function(){
