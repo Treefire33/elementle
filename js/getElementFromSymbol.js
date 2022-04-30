@@ -16,4 +16,28 @@ function getElementFromSymbol(symbol)
   {
     return "beryllium";
   }
+  if(symbol === "b")
+  {
+    return "boron";
+  }
+  if(symbol === "c")
+  {
+    return "carbon";
+  }
+  if(symbol === "n")
+  {
+    return "nitrogen";
+  }
+  if(symbol === "o")
+  {
+    return "oxygen";
+  }
+  if(symbol === "f")
+  {
+    return "fluorine";
+  }
+  if(symbol === "ne")
+  {
+    return "neon";
+  }
 }
