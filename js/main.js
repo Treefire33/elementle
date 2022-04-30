@@ -37,7 +37,7 @@ $(document).ready(function(){
         {
             let newIMG = getElementFromSymbol(guessQueued);
             var img = new Image();
-            img.src = "/img/"+newIMG+".png";
+            img.src = "https://raw.githubusercontent.com/Treefire33/elementle/main/img/"+newIMG+".png";
             img.width = "100px";
             img.height = "100px";
             $("#guesses").append(img, "" ,newIMG, "<br>");
