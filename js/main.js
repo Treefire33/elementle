@@ -37,10 +37,10 @@ $(document).ready(function(){
         {
             let newIMG = getElementFromSymbol(guessQueued);
             var img = new Image();
-            img.src = "img/"+newIMG+".png";
+            img.src = "/img/"+newIMG+".png";
             img.width = "100px";
             img.height = "100px";
-            $("#guesses").append(img, "\n" ,newIMG, "\n\n\n");
+            $("#guesses").append(img, "" ,newIMG, "<br>");
         }
         guessQueued = "NAVA";
     });
