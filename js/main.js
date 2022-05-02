@@ -1,11 +1,11 @@
 publishClue();
 var currentPeriod = 1;
 var guessQueued = "NAVA";
+var guesses = 0;
 $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
 $('.helpBackground').show();
-var guesses = 0;
 $("#winpopup").hide();
 $(document).ready(function(){
     $('.helpBackground').click(function(){
@@ -13,6 +13,12 @@ $(document).ready(function(){
     });
     $('.popupCloseButton').click(function(){
         $('.helpBackground').hide();
+    });
+    $('#winpopup').click(function(){
+        location.reload();
+    });
+    $('#winpopup > .popupCloseButton').click(function(){
+        location.reload();
     });
     $("#lbttn").click(function(){
         if(currentPeriod !== 1)
@@ -43,21 +49,20 @@ $(document).ready(function(){
                 var val = newIMG, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
                 img.src = src;
                 $("#guesses").append('<div id="guess'+guesses+'"'+'>', img, "<br>" ,newIMG, "</div>", "<br>");
-                var correctnessImage = checkCorrectness(newIMG);
-                var val = correctnessImage, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
-                img.src = src;
-                img.width = "75px";
-                img.height = "75px";
-                $("#guess"+guesses.toString()).append(img);
+//                 var correctnessImage = checkCorrectness(newIMG);
+//                 var val = correctnessImage, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
+//                 img.src = src;
+//                 img.width = "75px";
+//                 img.height = "75px";
+//                 $("#guess"+guesses.toString()).append(img);
                 guesses = guesses + 1;
                 var correctness = checkCorrectness(newIMG);
-                if(correctness === "check")
+                if(correctness == "check")
                 {
                     $("#winpopup").show();
                     $("#guessesUsed").text(guesses + " guesses");
                     let points = calcPoints(guesses);
                     $("#pointsEarned").text(points + " points");
-                    document.getElementById("enter").disabled = true;
                 }
             }
             else
