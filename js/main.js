@@ -5,6 +5,7 @@ $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
 $('.helpBackground').show();
+var guesses = 1;
 $(document).ready(function(){
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
@@ -32,19 +33,25 @@ $(document).ready(function(){
        var guessId = $(this).attr('id');
        guessQueued = guessId;
     });
-    var guesses = 1;
     $("#enter").click(function(){
         if(guessQueued !== "NAVA")
         {
-            let newIMG = getElementFromSymbol(guessQueued);
-            var val = newIMG, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
-            img.src = src;
-            $("#guesses").append('<div id="guess'+guesses+'"'+'>', img, "<br>" ,newIMG, "</div>", "<br>");
-            var correctnessImage = checkCorrectness(newIMG);
-            var val = correctnessImage, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
-            img.src = src;
-            $("#guess"+guesses).appended(img);
-            guesses = guesses + 1;
+            if(guesses != 7)
+            {
+                let newIMG = getElementFromSymbol(guessQueued);
+                var val = newIMG, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
+                img.src = src;
+                $("#guesses").append('<div id="guess'+guesses+'"'+'>', img, "<br>" ,newIMG, "</div>", "<br>");
+                var correctnessImage = checkCorrectness(newIMG);
+                var val = correctnessImage, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
+                img.src = src;
+                $("#guess"+guesses).append(img);
+                guesses = guesses + 1;
+            }
+            else
+            {
+                alert("Cannot guess anymore!");
+            }
         }
         guessQueued = "NAVA";
     });
@@ -52,11 +59,11 @@ $(document).ready(function(){
 
 function checkCorrectness(answer)
 {
-    if(answer === currentAnswer)
+    if(answer == currentAnswer)
     {
         return "check";
     }
-    else if(answer === currentCloseAnswer)
+    else if(answer == currentCloseAnswer)
     {
         return "triangle";
     }
