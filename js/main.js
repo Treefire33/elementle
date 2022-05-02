@@ -52,11 +52,11 @@ $(document).ready(function(){
 
 function checkCorrectness(answer)
 {
-    if(answer === correctAnswer)
+    if(answer === currentAnswer)
     {
         return "check";
     }
-    else if(answer === "he")
+    else if(answer === currentCloseAnswer)
     {
         return "triangle";
     }
