@@ -48,10 +48,10 @@ $(document).ready(function(){
                 img.src = src;
                 img.width = "75px";
                 img.height = "75px";
-                $("#guess"+guesses).append(img);
+                $("#guess"+guesses.toString()).append(img);
                 guesses = guesses + 1;
                 var correctness = checkCorrectness(newIMG);
-                setTimeout("win", 100, correctness);
+                win(correctness, guesses);
             }
             else
             {
@@ -78,7 +78,7 @@ function checkCorrectness(answer)
     }
 }
 
-function win(correctness)
+function win(correctness, guesses)
 {
     if(correctness === "check")
     {
