@@ -1,11 +1,11 @@
 publishClue();
 var currentPeriod = 1;
 var guessQueued = "NAVA";
+$(".row").hide();
+$("#p1").show();
+$("#clues").text(currentClue);
+$('.helpBackground').show();
 $(document).ready(function(){
-    $(".row").hide();
-    $("#p1").show();
-    $("#clues").text(currentClue);
-    $('.helpBackground').show();
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
     });
@@ -36,11 +36,9 @@ $(document).ready(function(){
         if(guessQueued !== "NAVA")
         {
             let newIMG = getElementFromSymbol(guessQueued);
-            var img = new Image();
-            img.src = "https://raw.githubusercontent.com/Treefire33/elementle/main/img/"+newIMG+".png";
-            img.width = "100px";
-            img.height = "100px";
-            $("#guesses").append(img, "" ,newIMG, "<br>");
+            var val = newIMG, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
+            img.src = src;
+            $("#guesses").append(img, "<br>" ,newIMG, "<br>");
         }
         guessQueued = "NAVA";
     });
