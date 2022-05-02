@@ -51,7 +51,14 @@ $(document).ready(function(){
                 $("#guess"+guesses.toString()).append(img);
                 guesses = guesses + 1;
                 var correctness = checkCorrectness(newIMG);
-                win(correctness, guesses);
+                if(correctness === "check")
+                {
+                    $("#winpopup").show();
+                    $("#guessesUsed").text(guesses + " guesses");
+                    let points = calcPoints(guesses);
+                    $("#pointsEarned").text(points + " points");
+                    document.getElementById("enter").disabled = true;
+                }
             }
             else
             {
@@ -75,18 +82,6 @@ function checkCorrectness(answer)
     else
     {
         return "cross";
-    }
-}
-
-function win(correctness, guesses)
-{
-    if(correctness === "check")
-    {
-        $("#winpopup").show();
-        $("#guessesUsed").text(guesses + " guesses");
-        let points = calcPoints(guesses);
-        $("#pointsEarned").text(points + " points");
-        document.getElementById("enter").disabled = true;
     }
 }
 
