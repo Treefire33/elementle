@@ -5,8 +5,8 @@ $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
 $('.helpBackground').show();
-$("#winpopup").hide();
 var guesses = 0;
+$("#winpopup").hide();
 $(document).ready(function(){
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
@@ -51,14 +51,7 @@ $(document).ready(function(){
                 $("#guess"+guesses).append(img);
                 guesses = guesses + 1;
                 var correctness = checkCorrectness(newIMG);
-                if(correctness === "check")
-                {
-                    $("#winpopup").show();
-                    $("#guessesUsed").text(guesses + " guesses");
-                    let points = calcPoints(guesses);
-                    $("#pointsEarned").text(points + " points");
-                    $("#enter").prop("disabled", true);
-                }
+                setTimeout("win", 100, correctness);
             }
             else
             {
@@ -82,6 +75,18 @@ function checkCorrectness(answer)
     else
     {
         return "cross";
+    }
+}
+
+function win(correctness)
+{
+    if(correctness === "check")
+    {
+        $("#winpopup").show();
+        $("#guessesUsed").text(guesses + " guesses");
+        let points = calcPoints(guesses);
+        $("#pointsEarned").text(points + " points");
+        document.getElementById("enter").disabled = true;
     }
 }
 
