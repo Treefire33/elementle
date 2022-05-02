@@ -5,7 +5,7 @@ $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
 $('.helpBackground').show();
-var guesses = 1;
+var guesses = 0;
 $(document).ready(function(){
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
@@ -45,8 +45,18 @@ $(document).ready(function(){
                 var correctnessImage = checkCorrectness(newIMG);
                 var val = correctnessImage, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
                 img.src = src;
+                img.width = "75px";
+                img.height = "75px";
                 $("#guess"+guesses).append(img);
                 guesses = guesses + 1;
+                var correctness = checkCorrectness(newIMG);
+                if(correctness === "check")
+                {
+                    $("#winpopup").show();
+                    $("#guessesUsed").text(guesses);
+                    let points = calcPoints(guesses);
+                    $("#pointsEarned").text(points);
+                }
             }
             else
             {
@@ -70,5 +80,33 @@ function checkCorrectness(answer)
     else
     {
         return "cross";
+    }
+}
+
+function calcPoints(gUS)
+{
+    if(gUS === 1)
+    {
+        return 10;
+    }
+    if(gUS === 2)
+    {
+        return 8;
+    }
+    if(gUS === 3)
+    {
+        return 6;
+    }
+    if(gUS === 4)
+    {
+        return 4;
+    }
+    if(gUS === 5)
+    {
+        return 2;
+    }
+    if(gUS === 6)
+    {
+        return 1;
     }
 }
