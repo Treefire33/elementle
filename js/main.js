@@ -5,6 +5,7 @@ $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
 $('.helpBackground').show();
+$("#winpopup").hide();
 var guesses = 0;
 $(document).ready(function(){
     $('.helpBackground').click(function(){
@@ -53,9 +54,10 @@ $(document).ready(function(){
                 if(correctness === "check")
                 {
                     $("#winpopup").show();
-                    $("#guessesUsed").text(guesses);
+                    $("#guessesUsed").text(guesses + " guesses");
                     let points = calcPoints(guesses);
-                    $("#pointsEarned").text(points);
+                    $("#pointsEarned").text(points + " points");
+                    $("#enter").prop("disabled", true);
                 }
             }
             else
