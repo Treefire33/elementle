@@ -5,8 +5,9 @@ var guesses = 0;
 $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
-$('.helpBackground').show();
+$("#beginGround").show();
 $("#winpopup").hide();
+$("#stats").hide();
 $(document).ready(function(){
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
