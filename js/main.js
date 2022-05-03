@@ -8,7 +8,15 @@ $("#clues").text(currentClue);
 $("#beginGround").show();
 $("#winpopup").hide();
 $("#stats").hide();
-let points = localStorage.getItem("points");
+var points;
+if(localStorage.points)
+{
+    points = localStorage.getItem("points");
+}
+else
+{
+    points = "No";
+}
 $("totalPointsEarned").text(points.toString() + " points");
 $(document).ready(function(){
     $('.helpBackground').click(function(){
