@@ -8,6 +8,8 @@ $("#clues").text(currentClue);
 $("#beginGround").show();
 $("#winpopup").hide();
 $("#stats").hide();
+let points = localStorage.getItem("points");
+$("totalPointsEarned").text(points.toString() + " points");
 $(document).ready(function(){
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
@@ -64,6 +66,7 @@ $(document).ready(function(){
                     $("#guessesUsed").text(guesses + " guesses");
                     let points = calcPoints(guesses);
                     $("#pointsEarned").text(points + " points");
+                    storeInt("points", Number(points));
                 }
             }
             else
