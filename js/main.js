@@ -9,15 +9,6 @@ $("#beginGround").show();
 $("#winpopup").hide();
 $("#stats").hide();
 var points;
-if(localStorage.points)
-{
-    points = localStorage.getItem("points");
-}
-else
-{
-    points = "No";
-}
-$("totalPointsEarned").text(points.toString() + " points");
 $(document).ready(function(){
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
@@ -31,6 +22,15 @@ $(document).ready(function(){
     $('#winpopup > .popupCloseButton').click(function(){
         location.reload();
     });
+    if(localStorage.points)
+    {
+        points = localStorage.getItem("points");
+        $("totalPointsEarned").text(points.toString() + " points");
+    }
+    else
+    {
+        points = "No";
+    }
     $("#lbttn").click(function(){
         if(currentPeriod !== 1)
         {
@@ -74,7 +74,7 @@ $(document).ready(function(){
                     $("#guessesUsed").text(guesses + " guesses");
                     let points = calcPoints(guesses);
                     $("#pointsEarned").text(points + " points");
-                    storeInt("points", Number(points));
+                    storeInt("points", points.toString());
                 }
             }
             else
