@@ -22,8 +22,11 @@ $(document).ready(function(){
     $('#winpopup > .popupCloseButton').click(function(){
         location.reload();
     });
-    $(".left").click(function(){
+    $("#stats").click(function(){
         $("#stats").show();
+    });
+    $("#help").click(function(){
+        $("#beginGround").show();                     
     });
     if(localStorage.points)
     {
