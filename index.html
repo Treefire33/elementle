@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/index.css"></link>
     </head>
     <body>
-        <div class="helpBackground">
+        <div class="helpBackground" id="beginGround">
             <span class="helper"></span>
             <div>
                 <div class="popupCloseButton">&times;</div>
@@ -29,7 +29,7 @@
             <span class="helper"></span>
             <div>
                 <div class="popupCloseButton">&times;</div>
-                <h1 style="font-size:70px">Elementle</h1>
+                <h1 style="font-size:70px">You Got It Right!</h1>
                 <hr>
                 <p>You won!</p>
                 <p>You got it correct in:</p>
@@ -37,6 +37,16 @@
                 <p>and earned:</p>
                 <h2 id="pointsEarned"></h2>
                 <p>Click to reload the page and try again.</p>
+            </div>
+        </div>
+        <div class="helpBackground" id="stats">
+            <span class="helper"></span>
+            <div>
+                <div class="popupCloseButton">&times;</div>
+                <h1 style="font-size:70px">Stats</h1>
+                <hr>
+                <h2>You have:</h2>
+                <h2 id="totalPointsEarned"></h2>
             </div>
         </div>
         <header>
