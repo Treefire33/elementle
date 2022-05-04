@@ -21,7 +21,7 @@ var answers=[
 var closeAnswers=[
   "helium",
   "hydrogen",
-  "magnesium",
+  "beryllium",
   "bromine",
   "cobalt",
   "potassium",
