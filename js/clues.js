@@ -8,7 +8,11 @@ var answers=[
   "selenium",
   "iron"
 ];
-var closeAnswers=["helium"];
+var closeAnswers=[
+  "helium",
+  "bromine",
+  "cobalt"
+];
 
 var currentClue;
 var currentAnswer;
@@ -18,8 +22,9 @@ publishClue();
 
 function publishClue()
 {
-  currentClue = clues[getRandomInt(0, clues.length-1)];
-  currentAnswer = answers[getRandomInt(0, answers.length-1)];
+  var intneeded = getRandomInt(0, clues.length-1);
+  currentClue = clues[intneeded];
+  currentAnswer = answers[intneeded];
   currentCloseAnswer = closeAnswers[0];
 }
 
