@@ -73,12 +73,14 @@ $(document).ready(function(){
                 var val = newIMG, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
                 img.src = src;
                 $("#guesses").append('<div id="guess'+guesses+'"'+'>', img, "<br>" ,newIMG, "</div>", "<br>");
-//                 var correctnessImage = checkCorrectness(newIMG);
-//                 var val = correctnessImage, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
-//                 img.src = src;
-//                 img.width = "75px";
-//                 img.height = "75px";
-//                 $("#guess"+guesses.toString()).append(img);
+                var correctnessImage = checkCorrectness(newIMG);
+                var val = correctnessImage;
+                var src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png';
+                var img = document.createElement('img');
+                img.src = src;
+                img.style.width = "75px";
+                img.style.height = "75px";
+                $("#guess"+guesses.toString()).append(img);
                 guesses = guesses + 1;
                 var correctness = checkCorrectness(newIMG);
                 if(correctness == "check")
