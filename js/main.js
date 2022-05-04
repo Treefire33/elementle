@@ -80,7 +80,7 @@ $(document).ready(function(){
                     $("#guessesUsed").text(guesses + " guesses");
                     let points = calcPoints(guesses);
                     $("#pointsEarned").text(points + " points");
-                    storeInt("points", points.toString());
+                    storeInt("points", localStorage.points.toString() + points.toString());
                 }
             }
             else
