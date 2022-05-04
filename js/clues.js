@@ -40,7 +40,7 @@ function publishClue()
   var intneeded = getRandomInt(0, clues.length-1);
   currentClue = clues[intneeded];
   currentAnswer = answers[intneeded];
-  currentCloseAnswer = closeAnswers[0];
+  currentCloseAnswer = closeAnswers[intneeded];
 }
 
 function getRandomInt(min, max) {
