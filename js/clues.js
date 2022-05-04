@@ -1,12 +1,22 @@
 var clues=[
   "What element is atomic number 1?",
+  "This element was discovered in 1868 and is gaseous",
+  "This element is a metal that that has a possible atomic weight of 7",
   "What element has an average atomic mass of 78?",
-  "What element has a melting point of 1538 degrees celcius?"
+  "What element has a melting point of 1538 degrees celcius?",
+  "This element is a period 2 element that has no valence electrons",
+  "This element has an allotrope that is commonly called 'lead' ",
+  "This element has many colors, and a boiling point of 280.5 degrees celcius for one of its colors?"
 ];
 var answers=[
   "hydrogen",
+  "helium",
+  "lithium",
   "selenium",
-  "iron"
+  "iron",
+  "neon",
+  "carbon",
+  "phosphorus"
 ];
 var closeAnswers=[
   "helium",
