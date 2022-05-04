@@ -20,8 +20,13 @@ var answers=[
 ];
 var closeAnswers=[
   "helium",
+  "hydrogen",
+  "magnesium",
   "bromine",
-  "cobalt"
+  "cobalt",
+  "potassium",
+  "nitrogen",
+  "sulfur"
 ];
 
 var currentClue;
