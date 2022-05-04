@@ -31,7 +31,7 @@ $(document).ready(function(){
     if(localStorage.points)
     {
         points = localStorage.getItem("points");
-        $("totalPointsEarned").text(points.toString() + " points");
+        $("#totalPointsEarned").text(points.toString() + " points");
     }
     else
     {
