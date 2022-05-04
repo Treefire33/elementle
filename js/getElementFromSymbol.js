@@ -40,4 +40,40 @@ function getElementFromSymbol(symbol)
   {
     return "neon";
   }
+  if(symbol === "na")
+  {
+    return "sodium";
+  }
+  if(symbol === "ne")
+  {
+    return "neon";
+  }
+  if(symbol === "mg")
+  {
+    return "magnesium";
+  }
+  if(symbol === "al")
+  {
+    return "aluminium";
+  }
+  if(symbol === "si")
+  {
+    return "silicon";
+  }
+  if(symbol === "p")
+  {
+    return "phosphorus";
+  }
+  if(symbol === "s")
+  {
+    return "sulfur";
+  }
+  if(symbol === "cl")
+  {
+    return "chlorine";
+  }
+  if(symbol === "ar")
+  {
+    return "argon";
+  }
 }
