@@ -125,11 +125,11 @@ function checkCorrectness(answer)
     {
         return "check";
     }
-    else if(answer == currentCloseAnswer)
+    if(answer == currentCloseAnswer)
     {
         return "triangle";
     }
-    else
+    if(answer != currentAnswer && answer != currentCloseAnswer)
     {
         return "cross";
     }
