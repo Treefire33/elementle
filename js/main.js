@@ -10,6 +10,7 @@ $(document).ready(function(){
     $("#beginGround").show();
     $("#winpopup").hide();
     $("#stats").hide();
+    $("#losepopup").hide();
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
     });
@@ -20,6 +21,12 @@ $(document).ready(function(){
         location.reload();
     });
     $('#winpopup > .popupCloseButton').click(function(){
+        location.reload();
+    });
+    $("#losepopup").click(function(){
+        location.reload();
+    });
+    $("#losepopup > .popupCloseButton").click(function(){
         location.reload();
     });
     $("#statsBttn").click(function(){
@@ -92,7 +99,18 @@ $(document).ready(function(){
             }
             else
             {
-                alert("Cannot guess anymore!");
+                $("#losepopup").show();
+                let points = 5;
+                $("#correctAnswerText").text(currentAnswer);
+                $("#pointsLost").text(points + " points");
+                if(localStorage.points)
+                {
+                    localStorage.points = Number(localStorage.points) - points;
+                }
+                else
+                {
+                    localStorage.points = 0;
+                }
             }
         }
         guessQueued = "NAVA";
