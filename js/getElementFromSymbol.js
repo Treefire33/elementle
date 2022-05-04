@@ -76,4 +76,13 @@ function getElementFromSymbol(symbol)
   {
     return "argon";
   }
+  //Period 4
+  if(symbol === "fe")
+  {
+    return "iron"
+  }
+  if(symbol === "se")
+  {
+    return "selenium";
+  }
 }
