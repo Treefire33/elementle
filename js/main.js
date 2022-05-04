@@ -5,11 +5,11 @@ var guesses = 0;
 $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
-$("#beginGround").show();
-$("#winpopup").hide();
-$("#stats").hide();
 var points;
 $(document).ready(function(){
+    $("#beginGround").show();
+    $("#winpopup").hide();
+    $("#stats").hide();
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
     });
@@ -22,10 +22,10 @@ $(document).ready(function(){
     $('#winpopup > .popupCloseButton').click(function(){
         location.reload();
     });
-    $("#stats").click(function(){
+    $("#statsBttn").click(function(){
         $("#stats").show();
     });
-    $("#help").click(function(){
+    $("#helpBttn").click(function(){
         $("#beginGround").show();                     
     });
     if(localStorage.points)
