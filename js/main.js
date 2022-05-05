@@ -24,10 +24,10 @@ $(document).ready(function(){
         resetGame();
     });
     $("#losepopup").click(function(){
-        location.reload();
+        resetGame();
     });
     $("#losepopup > .popupCloseButton").click(function(){
-        location.reload();
+        resetGame();
     });
     $("#statsBttn").click(function(){
         $("#stats").show();
