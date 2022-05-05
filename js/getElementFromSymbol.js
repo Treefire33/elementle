@@ -148,4 +148,76 @@ function getElementFromSymbol(symbol)
   {
     return "krypton";
   }
+  if(symbol === "rb")
+  {
+    return "rubidium";
+  }
+  if(symbol === "sr")
+  {
+    return "strontium";
+  } 
+  if(symbol === "y")
+  {
+    return "yttrium";
+  }
+  if(symbol === "zr")
+  {
+    return "zirconium";
+  }
+  if(symbol === "nb")
+  {
+    return "niobium";
+  }
+  if(symbol === "mo")
+  {
+    return "molybdenum";
+  }
+  if(symbol === "tc")
+  {
+    return "technetium";
+  }
+  if(symbol === "ru")
+  {
+    return "ruthenium";
+  }
+  if(symbol === "rh")
+  {
+    return "rhodium";
+  }
+  if(symbol === "pd")
+  {
+    return "palladium";
+  }
+  if(symbol === "ag")
+  {
+    return "silver";
+  }
+  if(symbol === "cd")
+  {
+    return "cadmium";
+  }
+  if(symbol === "in")
+  {
+    return "indium";
+  }
+  if(symbol === "sn")
+  {
+    return "tin";
+  }
+  if(symbol === "sb")
+  {
+    return "antimony";
+  }
+  if(symbol === "te")
+  {
+    return "tellurium";
+  }
+  if(symbol === "i")
+  {
+    return "iodine";
+  }
+  if(symbol === "xe")
+  {
+    return "xenon";
+  }
 }
