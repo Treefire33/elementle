@@ -18,10 +18,10 @@ $(document).ready(function(){
         $('.helpBackground').hide();
     });
     $('#winpopup').click(function(){
-        location.reload();
+        resetGame();
     });
     $('#winpopup > .popupCloseButton').click(function(){
-        location.reload();
+        resetGame();
     });
     $("#losepopup").click(function(){
         location.reload();
@@ -67,7 +67,7 @@ $(document).ready(function(){
     $("#enter").click(function(){
         if(guessQueued !== "NAVA")
         {
-            if(guesses != 7)
+            if(guesses != 5)
             {
                 let newIMG = getElementFromSymbol(guessQueued);
                 var val = newIMG, src = 'http://raw.githubusercontent.com/Treefire33/elementle/main/img/' + val +'.png', img = document.createElement('img');
@@ -161,4 +161,21 @@ function calcPoints(gUS)
     {
         return 1;
     }
+}
+
+function resetGame()
+{
+    if(localStorage.points)
+    {
+        points = localStorage.getItem("points");
+        $("#totalPointsEarned").text(points.toString() + " points");
+    }
+    else
+    {
+        points = "No";
+    }
+    publishClue();
+    guesses = 0;
+    $("#guesses").text("");
+    $("#clues").text(currentClue);
 }
