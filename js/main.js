@@ -150,72 +150,40 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(36,77,87)";
         }
-        else if(points !>= 20)
-        {
-            alert("Not Enough Points! \n Requires 20 points");
-        }
-        
+
         if($(this).attr('id') === "alkaliEarthMetals" && points >= 40)
         {
             document.body.style.backgroundColor = "rgb(98,46,57)";
-        }
-        else if(points !>= 40)
-        {
-            alert("Not Enough Points! \n Requires 40 points");
         }
         
         if($(this).attr('id') === "transMetals" && points >= 60)
         {
             document.body.style.backgroundColor = "rgb(67,60,101)";
         }
-        else if(points !>= 60)
-        {
-            alert("Not Enough Points! \n Requires 60 points");
-        }
         
         if($(this).attr('id') === "unknown" && points >= 80)
         {
             document.body.style.backgroundColor = "rgb(70,71,76)";
-        }
-        else if(points !>= 80)
-        {
-            alert("Not Enough Points! \n Requires 80 points");
         }
         
         if($(this).attr('id') === "metals" && points >= 100)
         {
             document.body.style.backgroundColor = "rgb(47,77,71)";
         }
-        else if(points !>= 100)
-        {
-            alert("Not Enough Points! \n Requires 100 points");
-        }
         
         if($(this).attr('id') === "metalloids" && points >= 150)
         {
             document.body.style.backgroundColor = "rgb(82,62,27)";
-        }
-        else if(points !>= 150)
-        {
-            alert("Not Enough Points! \n Requires 150 points");
         }
         
         if($(this).attr('id') === "nonMetals" && points >= 200)
         {
             document.body.style.backgroundColor = "rgb(42,65,101)";
         }
-        else if(points !>= 200)
-        {
-            alert("Not Enough Points! \n Requires 200 points");
-        }
         
         if($(this).attr('id') === "nobleGases" && points >= 400)
         {
             document.body.style.backgroundColor = "rgb(98,56,66)";
-        }
-        else if(points !>= 400)
-        {
-            alert("Not Enough Points! \n Requires 400 points");
         }
     });
 });
