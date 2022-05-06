@@ -44,6 +44,19 @@ $(document).ready(function(){
     {
         points = "No";
     }
+    if(localStorage.guessDistro)
+    {
+        $("#firstGuess").text(localStorage.guessDistro.split('/')[0]);
+        $("#secondGuess").text(localStorage.guessDistro.split('/')[0]);
+        $("#thirdGuess").text(localStorage.guessDistro.split('/')[0]);
+        $("#forthGuess").text(localStorage.guessDistro.split('/')[0]);
+        $("#fifthGuess").text(localStorage.guessDistro.split('/')[0]);
+        $("#sixthGuess").text(localStorage.guessDistro.split('/')[0]);
+    }
+    else
+    {
+        //Nothing should happen.
+    }
     $("#lbttn").click(function(){
         if(currentPeriod !== 1)
         {
@@ -112,6 +125,17 @@ $(document).ready(function(){
                 else
                 {
                     localStorage.points = 0;
+                }
+                //
+                if(localStorage.guessDistro)
+                {
+                    let guessesArray = [localStorage.guessDistro.split('/')[0],localStorage.guessDistro.split('/')[1],localStorage.guessDistro.split('/')[2],localStorage.guessDistro.split('/')[3],localStorage.guessDistro.split('/')[4],localStorage.guessDistro.split('/')[5]];
+                    guessesArray[guesses-1] = (Number(guessesArray[guesses-1]) + 1).toString();
+                    localStorage.guessDistro = guessesArray;
+                }
+                else
+                {
+                    localStorage.guessDistro = "0/0/0/0/0/0";
                 }
             }
         }
