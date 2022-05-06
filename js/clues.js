@@ -6,7 +6,7 @@ var clues=[
   "What element has a melting point of 1538 degrees celcius?",
   "This element is a period 2 element that has no valence electrons",
   "This element has an allotrope that is commonly called 'lead' ",
-  "This element has many colors, and a boiling point of 280.5 degrees celcius for one of its colors?"
+  "This element has varying boiling points and resides in period 3"
 ];
 var answers=[
   "hydrogen",
