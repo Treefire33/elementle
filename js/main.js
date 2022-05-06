@@ -47,15 +47,15 @@ $(document).ready(function(){
     if(localStorage.guessDistro)
     {
         $("#firstGuess").text(localStorage.guessDistro.split('/')[0]);
-        $("#secondGuess").text(localStorage.guessDistro.split('/')[0]);
-        $("#thirdGuess").text(localStorage.guessDistro.split('/')[0]);
-        $("#forthGuess").text(localStorage.guessDistro.split('/')[0]);
-        $("#fifthGuess").text(localStorage.guessDistro.split('/')[0]);
-        $("#sixthGuess").text(localStorage.guessDistro.split('/')[0]);
+        $("#secondGuess").text(localStorage.guessDistro.split('/')[1]);
+        $("#thirdGuess").text(localStorage.guessDistro.split('/')[2]);
+        $("#forthGuess").text(localStorage.guessDistro.split('/')[3]);
+        $("#fifthGuess").text(localStorage.guessDistro.split('/')[4]);
+        $("#sixthGuess").text(localStorage.guessDistro.split('/')[5]);
     }
     else
     {
-        //Nothing should happen.
+        $("#firstGuess").text("Coming Soon!");
     }
     $("#lbttn").click(function(){
         if(currentPeriod !== 1)
@@ -197,6 +197,19 @@ function resetGame()
     else
     {
         points = "No";
+    }
+    if(localStorage.guessDistro)
+    {
+        $("#firstGuess").text(localStorage.guessDistro.split('/')[0]);
+        $("#secondGuess").text(localStorage.guessDistro.split('/')[1]);
+        $("#thirdGuess").text(localStorage.guessDistro.split('/')[2]);
+        $("#forthGuess").text(localStorage.guessDistro.split('/')[3]);
+        $("#fifthGuess").text(localStorage.guessDistro.split('/')[4]);
+        $("#sixthGuess").text(localStorage.guessDistro.split('/')[5]);
+    }
+    else
+    {
+        $("#firstGuess").text("Coming Soon!");
     }
     publishClue();
     guesses = 0;
