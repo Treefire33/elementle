@@ -61,8 +61,9 @@ button{
     padding: 10px;
 }
 .shop{
+    width: 400px;
     height: 200px;
-    overflow-y: auto;
+    overflow: auto;
     white-space: nowrap;
 }
 .shopIcon{
@@ -70,6 +71,10 @@ button{
     border: 1px solid black;
     text-align: center;
     border-radius: 4px;
+}
+.shopIcon > img{
+    width: 394px;
+    height: 178px;
 }
 /* Popup box*/
 .helpBackground{
