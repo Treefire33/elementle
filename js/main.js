@@ -150,7 +150,7 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(36,77,87)";
         }
-        else
+        else if(points !>= 20)
         {
             alert("Not Enough Points! \n Requires 20 points");
         }
@@ -159,7 +159,7 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(98,46,57)";
         }
-        else
+        else if(points !>= 40)
         {
             alert("Not Enough Points! \n Requires 40 points");
         }
@@ -168,7 +168,7 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(67,60,101)";
         }
-        else
+        else if(points !>= 60)
         {
             alert("Not Enough Points! \n Requires 60 points");
         }
@@ -177,7 +177,7 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(70,71,76)";
         }
-        else
+        else if(points !>= 80)
         {
             alert("Not Enough Points! \n Requires 80 points");
         }
@@ -186,7 +186,7 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(47,77,71)";
         }
-        else
+        else if(points !>= 100)
         {
             alert("Not Enough Points! \n Requires 100 points");
         }
@@ -195,7 +195,7 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(82,62,27)";
         }
-        else
+        else if(points !>= 150)
         {
             alert("Not Enough Points! \n Requires 150 points");
         }
@@ -204,7 +204,7 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(42,65,101)";
         }
-        else
+        else if(points !>= 200)
         {
             alert("Not Enough Points! \n Requires 200 points");
         }
@@ -213,7 +213,7 @@ $(document).ready(function(){
         {
             document.body.style.backgroundColor = "rgb(98,56,66)";
         }
-        else
+        else if(points !>= 400)
         {
             alert("Not Enough Points! \n Requires 400 points");
         }
