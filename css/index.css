@@ -60,16 +60,16 @@ button{
     margin: auto;
     padding: 10px;
 }
+.shop{
+    height: 200px;
+    overflow-y: auto;
+    white-space: nowrap;
+}
 .shopIcon{
     background-color: grey;
     border: 1px solid black;
     text-align: center;
     border-radius: 4px;
-    display: inline-block;
-}
-.shop{
-    overflow: auto;
-    white-space: nowrap;
 }
 /* Popup box*/
 .helpBackground{
