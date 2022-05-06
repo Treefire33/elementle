@@ -60,7 +60,7 @@ button{
     margin: auto;
     padding: 10px;
 }
-.shopIcon{
+.shopIcon, .shopIcon2{
     background-color: grey;
     border: 1px solid black;
     text-align: center;
