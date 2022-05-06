@@ -60,6 +60,16 @@ button{
     margin: auto;
     padding: 10px;
 }
+.shopIcon{
+    background-color: grey;
+    border: 1px solid black;
+    text-align: center;
+    display: table-cell;
+    border-radius: 4px;
+}
+.shop{
+    display: table-row;
+}
 /* Popup box*/
 .helpBackground{
     background:rgba(0,0,0,.4);
