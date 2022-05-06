@@ -220,4 +220,140 @@ function getElementFromSymbol(symbol)
   {
     return "xenon";
   }
+  if(symbol === "cs")
+  {
+    return "caesium";
+  }
+  if(symbol === "ba")
+  {
+    return "barium";
+  }
+  if(symbol === "hf")
+  {
+    return "hafnium";
+  }
+  if(symbol === "ta")
+  {
+    return "tantalum";
+  }
+  if(symbol === "w")
+  {
+    return "tungsten";
+  }
+  if(symbol === "re")
+  {
+    return "rhenium";
+  }
+  if(symbol === "os")
+  {
+    return "osmium";
+  }
+  if(symbol === "ir")
+  {
+    return "iridium";
+  }
+  if(symbol === "pt")
+  {
+    return "platinum";
+  }
+  if(symbol === "au")
+  {
+    return "gold";
+  }
+  if(symbol === "hg")
+  {
+    return "mercury";
+  }
+  if(symbol === "tl")
+  {
+    return "thallium";
+  }
+  if(symbol === "pb")
+  {
+    return "lead";
+  }
+  if(symbol === "bi")
+  {
+    return "bismuth";
+  }
+  if(symbol === "po")
+  {
+    return "polonium";
+  }
+  if(symbol === "at")
+  {
+    return "astatine";
+  }
+  if(symbol === "rn")
+  {
+    return "radon";
+  }
+  if(symbol === "fr")
+  {
+    return "francium";
+  }
+  if(symbol === "ra")
+  {
+    return "radium";
+  }
+  if(symbol === "rf")
+  {
+    return "rutherfordium";
+  }
+  if(symbol === "db")
+  {
+    return "dubnium";
+  }
+  if(symbol === "sg")
+  {
+    return "seaborgium";
+  }
+  if(symbol === "bh")
+  {
+    return "bohrium";
+  }
+  if(symbol === "hs")
+  {
+    return "hassium";
+  }
+  if(symbol === "mt")
+  {
+    return "meitnerium";
+  }
+  if(symbol === "ds")
+  {
+    return "darmstadtium";
+  }
+  if(symbol === "rg")
+  {
+    return "roentgenium";
+  }
+  if(symbol === "cn")
+  {
+    return "copernicium";
+  }
+  if(symbol === "nh")
+  {
+    return "nihonium";
+  }
+  if(symbol === "fl")
+  {
+    return "flerovium";
+  }
+  if(symbol === "mc")
+  {
+    return "mosovium";
+  }
+  if(symbol === "lv")
+  {
+    return "livermorium";
+  }
+  if(symbol === "ts")
+  {
+    return "tennessine";
+  }
+  if(symbol === "og")
+  {
+    return "oganesson";
+  }
 }
