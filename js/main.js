@@ -11,6 +11,7 @@ $(document).ready(function(){
     $("#winpopup").hide();
     $("#stats").hide();
     $("#losepopup").hide();
+    $("#cosmeticsMenu").hide();
     $('.helpBackground').click(function(){
         $('.helpBackground').hide();
     });
@@ -34,6 +35,12 @@ $(document).ready(function(){
     });
     $("#helpBttn").click(function(){
         $("#beginGround").show();                     
+    });
+    $("#cosmeticsBttn").click(function(){
+        $("#cosmeticsMenu").show();
+    });
+    $(".shopIcon").click(function(){
+        alert($(this).attr('id')+" (Feature Soon!)");
     });
     if(localStorage.points)
     {
