@@ -39,6 +39,44 @@ $(document).ready(function(){
     $("#cosmeticsBttn").click(function(){
         $("#cosmeticsMenu").show();
     });
+    if(localStorage.points)
+    {
+        points = localStorage.getItem("points");
+        $("#totalPointsEarned").text(points.toString() + " points");
+    }
+    else
+    {
+        points = "No";
+    }
+    if(localStorage.guessDistro)
+    {
+        $("#firstGuess").text(localStorage.guessDistro.split('/')[0]);
+        $("#secondGuess").text(localStorage.guessDistro.split('/')[1]);
+        $("#thirdGuess").text(localStorage.guessDistro.split('/')[2]);
+        $("#forthGuess").text(localStorage.guessDistro.split('/')[3]);
+        $("#fifthGuess").text(localStorage.guessDistro.split('/')[4]);
+        $("#sixthGuess").text(localStorage.guessDistro.split('/')[5]);
+    }
+    else
+    {
+        $("#firstGuess").text("Coming Soon!");
+    }
+    $("#lbttn").click(function(){
+        if(currentPeriod !== 1)
+        {
+            currentPeriod -= 1;
+            $("#p"+currentPeriod.toString()).show();
+            $("#p"+(currentPeriod+1).toString()).hide();
+        }
+    });
+    $("#rbttn").click(function(){
+        if(currentPeriod !== 9)
+        {
+            currentPeriod += 1;
+            $("#p"+currentPeriod.toString()).show();
+            $("#p"+(currentPeriod-1).toString()).hide();
+        }
+    });
     $(".shopIcon").click(function(){
         if($(this).attr('id') == "alkaliMetals" && points >== 20)
         {
@@ -110,44 +148,6 @@ $(document).ready(function(){
         else
         {
             alert("Not Enough Points! \n Requires 400 points");
-        }
-    });
-    if(localStorage.points)
-    {
-        points = localStorage.getItem("points");
-        $("#totalPointsEarned").text(points.toString() + " points");
-    }
-    else
-    {
-        points = "No";
-    }
-    if(localStorage.guessDistro)
-    {
-        $("#firstGuess").text(localStorage.guessDistro.split('/')[0]);
-        $("#secondGuess").text(localStorage.guessDistro.split('/')[1]);
-        $("#thirdGuess").text(localStorage.guessDistro.split('/')[2]);
-        $("#forthGuess").text(localStorage.guessDistro.split('/')[3]);
-        $("#fifthGuess").text(localStorage.guessDistro.split('/')[4]);
-        $("#sixthGuess").text(localStorage.guessDistro.split('/')[5]);
-    }
-    else
-    {
-        $("#firstGuess").text("Coming Soon!");
-    }
-    $("#lbttn").click(function(){
-        if(currentPeriod !== 1)
-        {
-            currentPeriod -= 1;
-            $("#p"+currentPeriod.toString()).show();
-            $("#p"+(currentPeriod+1).toString()).hide();
-        }
-    });
-    $("#rbttn").click(function(){
-        if(currentPeriod !== 9)
-        {
-            currentPeriod += 1;
-            $("#p"+currentPeriod.toString()).show();
-            $("#p"+(currentPeriod-1).toString()).hide();
         }
     });
     $(".elementButton").click(function(){
