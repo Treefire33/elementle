@@ -78,7 +78,7 @@ $(document).ready(function(){
         }
     });
     $(".shopIcon").click(function(){
-        if($(this).attr('id') == "alkaliMetals" && points >== 20)
+        if($(this).attr('id') == "alkaliMetals" && points >= 20)
         {
             document.body.style.backgroundColor = "rgb(36,77,87)";
         }
@@ -87,7 +87,7 @@ $(document).ready(function(){
             alert("Not Enough Points! \n Requires 20 points");
         }
         
-        if($(this).attr('id') == "alkaliEarthMetals" && points >== 40)
+        if($(this).attr('id') == "alkaliEarthMetals" && points >= 40)
         {
             document.body.style.backgroundColor = "rgb(98,46,57)";
         }
@@ -96,7 +96,7 @@ $(document).ready(function(){
             alert("Not Enough Points! \n Requires 40 points");
         }
         
-        if($(this).attr('id') == "transMetals" && points >== 60)
+        if($(this).attr('id') == "transMetals" && points >= 60)
         {
             document.body.style.backgroundColor = "rgb(67,60,101)";
         }
@@ -105,7 +105,7 @@ $(document).ready(function(){
             alert("Not Enough Points! \n Requires 60 points");
         }
         
-        if($(this).attr('id') == "unknown" && points >== 80)
+        if($(this).attr('id') == "unknown" && points >= 80)
         {
             document.body.style.backgroundColor = "rgb(70,71,76)";
         }
@@ -114,7 +114,7 @@ $(document).ready(function(){
             alert("Not Enough Points! \n Requires 80 points");
         }
         
-        if($(this).attr('id') == "metals" && points >== 100)
+        if($(this).attr('id') == "metals" && points >= 100)
         {
             document.body.style.backgroundColor = "rgb(47,77,71)";
         }
@@ -123,7 +123,7 @@ $(document).ready(function(){
             alert("Not Enough Points! \n Requires 100 points");
         }
         
-        if($(this).attr('id') == "metalloids" && points >== 150)
+        if($(this).attr('id') == "metalloids" && points >= 150)
         {
             document.body.style.backgroundColor = "rgb(82,62,27)";
         }
@@ -132,7 +132,7 @@ $(document).ready(function(){
             alert("Not Enough Points! \n Requires 150 points");
         }
         
-        if($(this).attr('id') == "nonMetals" && points >== 200)
+        if($(this).attr('id') == "nonMetals" && points >= 200)
         {
             document.body.style.backgroundColor = "rgb(42,65,101)";
         }
@@ -141,7 +141,7 @@ $(document).ready(function(){
             alert("Not Enough Points! \n Requires 200 points");
         }
         
-        if($(this).attr('id') == "nobleGases" && points >== 400)
+        if($(this).attr('id') == "nobleGases" && points >= 400)
         {
             document.body.style.backgroundColor = "rgb(98,56,66)";
         }
