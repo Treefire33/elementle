@@ -176,7 +176,6 @@ $(document).ready(function(){
         guessQueued = "NAVA";
     });
     $(".shopIcon").click(function(){
-        document.body.style.backgroundSize = "150px 150px";
         if($(this).attr('id') === "alkaliMetals" && points >= 20)
         {
             document.body.style.backgroundColor = "rgb(36,77,87)";
@@ -228,26 +227,31 @@ $(document).ready(function(){
         {
             document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/cardboardRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
+            document.body.style.backgroundSize = "150px 150px";
         }
         if($(this).attr('id') === "bronzeRank" && points >= 100)
         {
             document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/bronzeRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
+            document.body.style.backgroundSize = "150px 150px";
         }
         if($(this).attr('id') === "silverRank" && points >= 500)
         {
             document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/silverRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
+            document.body.style.backgroundSize = "150px 150px";
         }
         if($(this).attr('id') === "goldRank" && points >= 1000)
         {
             document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/goldRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
+            document.body.style.backgroundSize = "150px 150px";
         }
         if($(this).attr('id') === "championRank" && points >= 5000)
         {
             document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/championRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
+            document.body.style.backgroundSize = "150px 150px";
         }
     });
 });
