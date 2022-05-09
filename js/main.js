@@ -50,12 +50,12 @@ $(document).ready(function(){
     }
     if(localStorage.guessDistro)
     {
-        $("#firstGuess").text(localStorage.guessDistro.split('/')[0]);
-        $("#secondGuess").text(localStorage.guessDistro.split('/')[1]);
-        $("#thirdGuess").text(localStorage.guessDistro.split('/')[2]);
-        $("#forthGuess").text(localStorage.guessDistro.split('/')[3]);
-        $("#fifthGuess").text(localStorage.guessDistro.split('/')[4]);
-        $("#sixthGuess").text(localStorage.guessDistro.split('/')[5]);
+        $("#firstGuess").text(localStorage.guessDistro1);
+        $("#secondGuess").text(localStorage.guessDistro2);
+        $("#thirdGuess").text(localStorage.guessDistro3);
+        $("#forthGuess").text(localStorage.guessDistro4);
+        $("#fifthGuess").text(localStorage.guessDistro5);
+        $("#sixthGuess").text(localStorage.guessDistro6);
     }
     else
     {
@@ -106,6 +106,10 @@ $(document).ready(function(){
                     $("#guessesUsed").text(guesses + " guesses");
                     let points = calcPoints(guesses);
                     $("#pointsEarned").text(points + " points");
+                    if(guesses <= 4)
+                    {
+                        multiplier(points);
+                    }
                     if(localStorage.points)
                     {
                         localStorage.points = Number(localStorage.points) + points;
@@ -131,15 +135,41 @@ $(document).ready(function(){
                     localStorage.points = 0;
                 }
                 //
-                if(localStorage.guessDistro)
+                if(localStorage.guessDistro1)
                 {
-                    let guessesArray = [localStorage.guessDistro.split('/')[0],localStorage.guessDistro.split('/')[1],localStorage.guessDistro.split('/')[2],localStorage.guessDistro.split('/')[3],localStorage.guessDistro.split('/')[4],localStorage.guessDistro.split('/')[5]];
-                    guessesArray[guesses-1] = (Number(guessesArray[guesses-1]) + 1).toString();
-                    localStorage.guessDistro = guessesArray;
+                    if(guesses == 1)
+                    {
+                        localStorage.guessDistro1 = (Number(localStorage.guessDistro1) + 1).toString();
+                    }
+                    if(guesses == 2)
+                    {
+                        localStorage.guessDistro2 = (Number(localStorage.guessDistro2) + 1).toString();
+                    }
+                    if(guesses == 3)
+                    {
+                        localStorage.guessDistro3 = (Number(localStorage.guessDistro3) + 1).toString();
+                    }
+                    if(guesses == 4)
+                    {
+                        localStorage.guessDistro4 = (Number(localStorage.guessDistro4) + 1).toString();
+                    }
+                    if(guesses == 5)
+                    {
+                        localStorage.guessDistro5 = (Number(localStorage.guessDistro5) + 1).toString();
+                    }
+                    if(guesses == 6)
+                    {
+                        localStorage.guessDistro6 = (Number(localStorage.guessDistro6) + 1).toString();
+                    }
                 }
                 else
                 {
-                    localStorage.guessDistro = "0/0/0/0/0/0";
+                    localStorage.guessDistro1 = "0";
+                    localStorage.guessDistro3 = "0";
+                    localStorage.guessDistro4 = "0";
+                    localStorage.guessDistro5 = "0";
+                    localStorage.guessDistro6 = "0";
+                    localStorage.guessDistro2 = "0";
                 }
             }
         }
@@ -255,6 +285,20 @@ function calcPoints(gUS)
     if(gUS === 6)
     {
         return 1;
+    }
+}
+
+function multiplier(p)
+{
+    if(sessionStorage.correctPlays)
+    {
+        sessionStorage.correctPlays = Number(sessionStorage.correctPlays) + 1;
+        p *= Number(sessionStorage.correctPlays);
+    }
+    else
+    {
+        sessionStorage.correctPlays = 1;
+        p *= Number(sessionStorage.correctPlays);
     }
 }
 
