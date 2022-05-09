@@ -218,27 +218,27 @@ $(document).ready(function(){
         
         if($(this).attr('id') === "cardboardRank" && points >= 10)
         {
-            document.body.style.backgroundImage = 'url("../img/cardboardRank.png")';
+            document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/cardboardRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
         }
         if($(this).attr('id') === "bronzeRank" && points >= 100)
         {
-            document.body.style.backgroundImage = 'url("../img/bronzeRank.png")';
+            document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/bronzeRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
         }
         if($(this).attr('id') === "silverRank" && points >= 500)
         {
-            document.body.style.backgroundImage = 'url("../img/silverRank.png")';
+            document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/silverRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
         }
         if($(this).attr('id') === "goldRank" && points >= 1000)
         {
-            document.body.style.backgroundImage = 'url("../img/goldRank.png")';
+            document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/goldRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
         }
         if($(this).attr('id') === "championRank" && points >= 5000)
         {
-            document.body.style.backgroundImage = 'url("../img/championRank.png")';
+            document.body.style.backgroundImage = "url('https://raw.githubusercontent.com/Treefire33/elementle/main/img/championRank.png')";
             document.body.style.backgroundRepeat = 'repeat';
         }
     });
