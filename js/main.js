@@ -2,6 +2,7 @@ publishClue();
 var currentPeriod = 1;
 var guessQueued = "NAVA";
 var guesses = 0;
+var correctPlays = 1;
 $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
@@ -102,11 +103,11 @@ $(document).ready(function(){
                 var correctness = checkCorrectness(newIMG);
                 if(correctness == "check")
                 {
+                    correctPlays = correctPlays + 1;
                     $("#winpopup").show();
                     $("#guessesUsed").text(guesses + " guesses");
-                    let points = calcPoints(guesses);
+                    let points = calcPoints(guesses, correctPlays);
                     $("#pointsEarned").text(points + " points");
-                    multiplier(points);
                     if(localStorage.points)
                     {
                         localStorage.points = Number(localStorage.points) + points;
@@ -119,6 +120,7 @@ $(document).ready(function(){
             }
             else
             {
+                correctPlays = 0;
                 $("#losepopup").show();
                 let points = 5;
                 $("#correctAnswerText").text(currentAnswer);
@@ -269,45 +271,31 @@ function checkCorrectness(answer)
     }
 }
 
-function calcPoints(gUS)
+function calcPoints(gUS, factor)
 {
     if(gUS === 1)
     {
-        return 10;
+        return 10 * factor;
     }
     if(gUS === 2)
     {
-        return 8;
+        return 8 * factor;
     }
     if(gUS === 3)
     {
-        return 6;
+        return 6 * factor;
     }
     if(gUS === 4)
     {
-        return 4;
+        return 4 * factor;
     }
     if(gUS === 5)
     {
-        return 2;
+        return 2 * factor;
     }
     if(gUS === 6)
     {
-        return 1;
-    }
-}
-
-function multiplier(p)
-{
-    if(localStorage.correctPlays)
-    {
-        localStorage.correctPlays = Number(localStorage.correctPlays) + 1;
-        p = p * Number(localStorage.correctPlays);
-    }
-    else
-    {
-        localStorage.correctPlays = 1;
-        p = p * Number(localStorage.correctPlays);
+        return 1 * factor;
     }
 }
 
