@@ -106,10 +106,7 @@ $(document).ready(function(){
                     $("#guessesUsed").text(guesses + " guesses");
                     let points = calcPoints(guesses);
                     $("#pointsEarned").text(points + " points");
-                    if(guesses <= 4)
-                    {
-                        multiplier(points);
-                    }
+                    multiplier(points);
                     if(localStorage.points)
                     {
                         localStorage.points = Number(localStorage.points) + points;
@@ -302,15 +299,15 @@ function calcPoints(gUS)
 
 function multiplier(p)
 {
-    if(sessionStorage.correctPlays)
+    if(localStorage.correctPlays)
     {
-        sessionStorage.correctPlays = Number(sessionStorage.correctPlays) + 1;
-        p *= Number(sessionStorage.correctPlays);
+        localStorage.correctPlays = Number(localStorage.correctPlays) + 1;
+        p = p * Number(localStorage.correctPlays);
     }
     else
     {
-        sessionStorage.correctPlays = 1;
-        p *= Number(sessionStorage.correctPlays);
+        localStorage.correctPlays = 1;
+        p = p * Number(localStorage.correctPlays);
     }
 }
 
