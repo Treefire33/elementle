@@ -176,24 +176,29 @@ $(document).ready(function(){
         guessQueued = "NAVA";
     });
     $(".shopIcon").click(function(){
+        document.body.style.backgroundSize = "150px 150px";
         if($(this).attr('id') === "alkaliMetals" && points >= 20)
         {
             document.body.style.backgroundColor = "rgb(36,77,87)";
+            document.body.style.backgroundImage = "none";
         }
 
         if($(this).attr('id') === "alkaliEarthMetals" && points >= 40)
         {
             document.body.style.backgroundColor = "rgb(98,46,57)";
+            document.body.style.backgroundImage = "none";
         }
         
         if($(this).attr('id') === "transMetals" && points >= 60)
         {
             document.body.style.backgroundColor = "rgb(67,60,101)";
+            document.body.style.backgroundImage = "none";
         }
         
         if($(this).attr('id') === "unknown" && points >= 80)
         {
             document.body.style.backgroundColor = "rgb(70,71,76)";
+            document.body.style.backgroundImage = "none";
         }
         
         if($(this).attr('id') === "metals" && points >= 100)
@@ -204,16 +209,19 @@ $(document).ready(function(){
         if($(this).attr('id') === "metalloids" && points >= 150)
         {
             document.body.style.backgroundColor = "rgb(82,62,27)";
+            document.body.style.backgroundImage = "none";
         }
         
         if($(this).attr('id') === "nonMetals" && points >= 200)
         {
             document.body.style.backgroundColor = "rgb(42,65,101)";
+            document.body.style.backgroundImage = "none";
         }
         
         if($(this).attr('id') === "nobleGases" && points >= 400)
         {
             document.body.style.backgroundColor = "rgb(98,56,66)";
+            document.body.style.backgroundImage = "none";
         }
         
         if($(this).attr('id') === "cardboardRank" && points >= 10)
