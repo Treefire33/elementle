@@ -2,7 +2,7 @@ publishClue();
 var currentPeriod = 1;
 var guessQueued = "NAVA";
 var guesses = 0;
-var correctPlays = 1;
+var correctPlays = -10;
 $(".row").hide();
 $("#p1").show();
 $("#clues").text(currentClue);
@@ -103,7 +103,7 @@ $(document).ready(function(){
                 var correctness = checkCorrectness(newIMG);
                 if(correctness == "check")
                 {
-                    correctPlays = correctPlays + 1;
+                    correctPlays = correctPlays + 10;
                     $("#winpopup").show();
                     $("#guessesUsed").text(guesses + " guesses");
                     let points = calcPoints(guesses, correctPlays);
@@ -120,7 +120,7 @@ $(document).ready(function(){
             }
             else
             {
-                correctPlays = 0;
+                correctPlays = -10;
                 $("#losepopup").show();
                 let points = 5;
                 $("#correctAnswerText").text(currentAnswer);
@@ -275,27 +275,27 @@ function calcPoints(gUS, factor)
 {
     if(gUS === 1)
     {
-        return 10 * factor;
+        return 10 + factor;
     }
     if(gUS === 2)
     {
-        return 8 * factor;
+        return 8 + factor;
     }
     if(gUS === 3)
     {
-        return 6 * factor;
+        return 6 + factor;
     }
     if(gUS === 4)
     {
-        return 4 * factor;
+        return 4 + factor;
     }
     if(gUS === 5)
     {
-        return 2 * factor;
+        return 2 + factor;
     }
     if(gUS === 6)
     {
-        return 1 * factor;
+        return 1 + factor;
     }
 }
 
