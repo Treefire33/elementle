@@ -80,11 +80,23 @@ $(document).ready(function(){
     });
     $(".elementButton").click(function(){
        var guessId = $(this).attr('id');
+       if(guessQueued != "NAVA")
+       {
+           $("#"+guessQueued).style.mozBoxShadow = "none";
+           $("#"+guessQueued).style.webkitBoxShadow = "none";
+           $("#"+guessQueued).style.boxShadow = "none";
+       }
        guessQueued = guessId;
+       $(this).style.mozBoxShadow = "0px 0px 10px blue";
+       $(this).style.webkitBoxShadow = "0px 0px 10px blue";
+       $(this).style.boxShadow = "0px 0px 10px blue";
     });
     $("#enter").click(function(){
         if(guessQueued !== "NAVA")
         {
+            $("#"+guessQueued).style.mozBoxShadow = "none";
+            $("#"+guessQueued).style.webkitBoxShadow = "none";
+            $("#"+guessQueued).style.boxShadow = "none";
             if(guesses != 5)
             {
                 let newIMG = getElementFromSymbol(guessQueued);
