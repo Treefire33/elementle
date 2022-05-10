@@ -48,6 +48,7 @@ button{
 }
 #lbttn, #rbttn{
     transform: translate(0px, 20px);
+    background-color: white;
 }
 .row img{
     display: inline-block;
