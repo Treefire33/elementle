@@ -37,10 +37,11 @@ function reworkIntoArray(object)
 
 function publishClue()
 {
-	var intneeded = getRandomInt(0, clues.length-1);
+	reworkIntoArray(clues);
+	var intneeded = getRandomInt(0, arrClues.length-1);
 	currentClue = arrClues[intneeded];
 	currentAnswer = arrAnswers[intneeded];
-	currentCloseAnswer = "none";
+	currentCloseAnswer = "hydrogen";
 }
 
 function getRandomInt(min, max) {
