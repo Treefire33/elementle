@@ -24,8 +24,8 @@ var clues={
 var currentClue;
 var currentAnswer;
 var currentCloseAnswer;
-var arrClues;
-var arrAnswers;
+var arrClues = [];
+var arrAnswers = [];
 
 publishClue();
 
