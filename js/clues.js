@@ -7,7 +7,7 @@ var clues={
 	/*carbon*/"This element has an allotrope that is commonly called 'pencil lead' ":"carbon",
 	/*nitrogen*/"This element has a melting point of -210.01°C":"nitrogen",
 	/*oxygen*/"This element is used to give blood its red color.":"oxygen",
-	/*fluorine*/"":"fluorine",
+	/*fluorine*/"This element is used in toothpaste. Its chemical formula is F−":"fluorine",
 	/*neon*/"This element is a period 2 element that has no valence electrons":"neon",
 	/*sodium*/"This element is used to make salt.":"sodium",
 	/*magnesium*/"This element is atomic number 12.":"magnesium",
