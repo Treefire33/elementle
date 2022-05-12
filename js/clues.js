@@ -12,7 +12,7 @@ var clues={
 	/*sodium*/"This element is used to make salt.":"sodium",
 	/*magnesium*/"This element is atomic number 12.":"magnesium",
 	/*aluminium*/"This element is used in soda cans.":"aluminium",
-	/*slicon*/"This element is used in a varitey of computer parts":"slicon",
+	/*silicon*/"This element is used in a varitey of computer parts":"silicon",
 	/*phosphorus*/"This element has varying boiling points and resides in period 3":"phosphorus",
 	/*sulfur*/"This element produces a bad smell":"sulfur",
 	/*chlorine*/"Used in water purification.":"chlorine",
